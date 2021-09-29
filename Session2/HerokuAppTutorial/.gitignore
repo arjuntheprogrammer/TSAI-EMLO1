@@ -1,4 +1,7 @@
 .DS_Store
-__pycache__
-nn/data/
+__pycache__/
+app/nn/data/
 mnist_ffn.pth
+
+*.py[cod]
+*$py.class

@@ -1,6 +1,5 @@
 from flask import Flask, request, jsonify
-from torch_utils import get_prediction, transform_image
-
+from app.torch_utils import get_prediction, transform_image
 
 app = Flask(__name__)
 

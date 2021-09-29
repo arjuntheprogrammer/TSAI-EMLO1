@@ -44,6 +44,16 @@ Install Flask and PyTorch
 - pip install gunicorn
 - pip freeze > requirements.txt
 
+MAC Install:
+
+- brew tap heroku/brew && brew install heroku
+
+Linux Install:
+
+- sudo snap install --classic heroku
+
+Create App:
+
 - heroku login -i
 - heroku create your-app-name
 
