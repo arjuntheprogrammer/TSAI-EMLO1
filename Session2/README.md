@@ -64,7 +64,7 @@ Test your app locally:
 Commit to GIT:
 
 - git init
-- heroku git:remote -a your-app-name
+- heroku git:remote -a pytorch-model-flask
 - git add .
 - git commit -m "initial commit"
 - git push heroku master
