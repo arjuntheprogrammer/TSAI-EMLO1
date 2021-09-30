@@ -1,8 +1,11 @@
-from os import error
+import sys
+import os
 from flask import Flask, request, jsonify, render_template, redirect, url_for, send_from_directory
 from app.torch_utils import get_prediction, transform_image
 from app.nn.constants import *
 import uuid
+import logging
+
 
 app = Flask(__name__)
 
@@ -59,3 +62,7 @@ def upload_file():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+if 'DYNO' in os.environ:
+    app.logger.addHandler(logging.StreamHandler(sys.stdout))
+    app.logger.setLevel(logging.ERROR)
