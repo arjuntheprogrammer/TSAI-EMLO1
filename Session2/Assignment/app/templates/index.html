@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>File Upload</title>
+  </head>
+
+  <body>
+    {% if error_msg %}
+    <p>{{error_msg}}</p>
+    {% endif %}
+
+    <h1>File Upload</h1>
+    <form method="POST" action="" enctype="multipart/form-data">
+      <p><input type="file" name="image_file" accept="image/*" /></p>
+
+      <p><input type="submit" value="Submit" /></p>
+    </form>
+
+    {% if predicted_value %}
+    <h1>Prediction</h1>
+    <h3>Predicted Value: {{predicted_value}}</h3>
+    <img src="{{url}}" alt="Italian Trulli" />
+    {% endif %}
+  </body>
+</html>
