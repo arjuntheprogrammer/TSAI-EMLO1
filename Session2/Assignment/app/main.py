@@ -57,4 +57,5 @@ def upload_file():
             error_msg="File Not Uploaded!")
 
 
-app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=True)
