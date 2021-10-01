@@ -37,17 +37,33 @@ def upload_file():
                 'index.html',
                 error_msg="Format Not Supported!. Allowed: png, jpg, jpeg.")
 
+        images_dir = "app/" + MEDIA_DIR
+        os.makedirs(images_dir, exist_ok=True)
+
         try:
-            file_path = (
-                MEDIA_DIR + str(uuid.uuid4()) +
+            file_name = (
+                str(uuid.uuid4()) +
                 "." + uploaded_file.filename.split(".")[-1])
             uploaded_file.save(
-                "app/" + file_path)
+                images_dir + file_name)
+        except:
+            return render_template(
+                'index.html',
+                error_msg="file saving error!")
 
-            tensor = transform_image("app/" + file_path)
+        try:
+            tensor = transform_image(images_dir + file_name)
+            print("image transform successful", flush=True)
+        except:
+            return render_template(
+                'index.html',
+                error_msg="error during tranformation!")
+
+        try:
             prediction = get_prediction(tensor)
+            print("image prediction successful", flush=True)
 
-            return render_template('index.html', url=file_path, predicted_value=str(prediction.item()))
+            return render_template('index.html', url=MEDIA_DIR + file_name, predicted_value=str(prediction.item()))
 
         except:
             return render_template(

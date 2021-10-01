@@ -2,6 +2,17 @@
 
 Rest APIs and Flask for ML Applications
 
+## Project Live Link
+
+<https://mnist-pytorch-model.herokuapp.com/>
+
+Download Sample Images:
+
+<img width="118" alt="five1" src="https://user-images.githubusercontent.com/15984084/135575122-94c65cf4-6ce7-4a08-92d5-f53fd3c447c6.png">
+<img width="112" alt="nine" src="https://user-images.githubusercontent.com/15984084/135575123-ab4f966a-5bc2-44f5-b13e-d99471008358.png">
+<img width="113" alt="zero" src="https://user-images.githubusercontent.com/15984084/135575124-e2a16715-1a9a-4328-b477-14aa0746aafb.png">
+<img width="114" alt="four" src="https://user-images.githubusercontent.com/15984084/135575126-b91e8045-7811-46df-8bab-5d7aed96f24f.png">
+
 ---
 
 ## ASSIGNMENT
@@ -76,3 +87,5 @@ Commit to GIT:
 1. <https://www.python-engineer.com/posts/pytorch-model-deployment-with-flask/>
 2. <https://www.python-engineer.com/courses/pytorchbeginner/13-feedforward-neural-network/>
 3. <https://youtu.be/bA7-DEtYCNM>
+
+---
