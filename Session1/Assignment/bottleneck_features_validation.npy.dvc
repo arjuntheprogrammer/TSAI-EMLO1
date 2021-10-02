@@ -1,0 +1,4 @@
+outs:
+- md5: a11ecabbbddb6a3cb0a023213f976550
+  size: 80281728
+  path: bottleneck_features_validation.npy

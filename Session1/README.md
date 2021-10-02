@@ -1,5 +1,7 @@
 # TSAI - Session 1
 
+MLOPs - Introduction and Version Control
+
 ## ASSIGNMENT
 
 1. Change train.py file to work with PyTorch
@@ -39,7 +41,7 @@ Get GIT Repository:
 
 ### COMMIT V1.0
 
-- dvc get https://github.com/iterative/dataset-registry/tutorials/versioning/data.zip
+- dvc get https://github.com/iterative/dataset-registry tutorials/versioning/data.zip
 - unzip -q data.zip
 - rm -f data.zip
 - dvc add data

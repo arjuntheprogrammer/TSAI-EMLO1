@@ -1,0 +1,4 @@
+outs:
+- md5: 8ecc47c8e94b524b402c705fc6283794
+  size: 200704128
+  path: bottleneck_features_train.npy
