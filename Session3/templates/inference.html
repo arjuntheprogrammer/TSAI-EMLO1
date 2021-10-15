@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    table,
+    th,
+    td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    .center {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+
+    <p class="lead">File(s) uploaded successfully.</p>
+
+    {% for output in output_list %}
+    <hr>
+    <h1 class="display-4">{{output.inference}}!</h1>
+    <p class="mt-5">Confidence: <strong>{{output.confidence}}%</strong></p>
+    <p class="mt-5">Filename: <strong>{{output.filename}}</strong></p>
+    <img src="{{output.file_url}}" alt="Image Not Found" width="200" height="200" />
+    {% endfor %}
+    <hr>
+    <p class="mt-3"> <a href="/">Try again</a></p>
+
+    <hr>
+    <br>
+    <h2>Previous Output</h2>
+    {% if previous_output_list %}
+    <table class="center">
+        <tr>
+            <th>Image</th>
+            <th>Inference</th>
+            <th>confidence</th>
+        </tr>
+        {% for previous_output in previous_output_list %}
+        <tr>
+            <td><img src="{{previous_output.file_url}}" alt="Image Not Found" width="200" height="200" /></td>
+            <td>{{previous_output.inference}}</td>
+            <td>{{previous_output.confidence}}%</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    {% endif %}
+</div>
+{% endblock %}
