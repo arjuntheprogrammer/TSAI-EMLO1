@@ -18,7 +18,7 @@ Containerization
 
 ---
 
-This website is deployed in Heroku: <???>
+This website is deployed in Heroku: <https://pytorch-flask-mobilenet.herokuapp.com/>
 
 By default, this app uses MobileNetV2 image classifier that was pre-trained on the ImageNet dataset. This can be easily changed with any custom deep learning model.
 
